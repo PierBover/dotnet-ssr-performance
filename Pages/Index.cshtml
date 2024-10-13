@@ -1,0 +1,12 @@
+@page
+@{
+	Layout = "_Layout";
+}
+@using dotnet_ssr_performance.Pages
+@model IndexModel
+
+@foreach (var tile in Model.Tiles)
+{
+	var style = $"left:{tile.X}px; top:{tile.Y}px;";
+	<div class="tile" style="@style"></div>
+}
